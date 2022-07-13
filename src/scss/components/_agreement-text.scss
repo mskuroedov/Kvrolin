@@ -1,0 +1,17 @@
+.agreement-text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  a {
+    color: #FFCF52;
+    &:hover{
+      color: #F4C628;
+    }
+  }
+  @media(max-width: 1023px){
+    font-size: 13px;
+    line-height: 20px;
+  }
+}

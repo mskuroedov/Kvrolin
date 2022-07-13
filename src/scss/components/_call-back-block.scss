@@ -1,0 +1,33 @@
+.call-back-block {
+  background: #F6CE45;
+  padding-top: 160px;
+  padding-bottom: 80px;
+  margin-top: -80px;
+
+  &__grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 28px;
+    grid-row-gap: 10px;
+
+    .h3 {
+      color: white;
+      margin-bottom: 0;
+    }
+
+    .button {
+      height: 50px;
+    }
+
+  }
+
+  @media(max-width: 1023px) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin-top: -20px;
+    &__grid {
+      grid-template-columns: 100%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.white-tile {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #F6F4F4;
+  border-radius: 6px;
+  padding: 10px 20px;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+
+  .bullet {
+    margin: 0 10px;
+  }
+
+  @media(max-width: 1023px) {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 10px;
+  }
+}

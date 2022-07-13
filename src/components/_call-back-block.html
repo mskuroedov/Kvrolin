@@ -1,0 +1,60 @@
+<section class="call-back-block">
+    <div class="container">
+        <div class="call-back-block__grid">
+            <h3 class="h3">Если у вас остались вопросы, свяжитесь с нами!</h3>
+            <button class="button button--block" data-toggle="modal" data-target="#callback-modal">связаться</button>
+        </div>
+    </div>
+</section>
+<div class="custom-modal modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callback-modal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M19 6.4L17.6 5L12 10.6L6.4 5L5 6.4L10.6 12L5 17.6L6.4 19L12 13.4L17.6 19L19 17.6L13.4 12L19 6.4Z"
+                          fill="currentColor"/>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <h3 class="modal-title">Остались вопросы?</h3>
+                <p class="modal-subtitle">Заполните форму и мы свяжемся с вами в ближайшее время.</p>
+                <form class="modal-form-grid" data-success="#callback-success-modal">
+                    <div class="form-input">
+                        <input type="text" name="name" id="callback-name"
+                               required
+                               placeholder="Имя">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" name="phone" id="callback-phone"
+                               data-inputmask="'mask':'+7(999)999-99-99'" required
+                               placeholder="Телефон">
+                    </div>
+
+                    <button class="button button--secondary button--block">
+                        Отправить заявку
+                    </button>
+                    <div class="agreement-text">Отправляя форму, вы даете <a href="#">Согласие на обработку персональных
+                        данных.</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="custom-modal modal fade" id="callback-success-modal" tabindex="-1" role="dialog"
+     aria-labelledby="callback-success-modal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./images/icons/cross.svg" alt="">
+            </button>
+            <div class="modal-body ">
+                <h3 class="modal-title">Спасибо за заяку!</h3>
+                <p class="modal-subtitle">Наш менеджер свяжется с вами в ближайшее время.</p>
+                <a href="/catalog" class="button button--secondary button--block">Перейти в каталог</a>
+            </div>
+        </div>
+    </div>
+</div>

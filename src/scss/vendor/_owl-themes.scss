@@ -1,0 +1,149 @@
+
+.owl-carousel {
+  .owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 10px;
+    margin-top: 20px;
+
+    .owl-dot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      z-index: 2;
+      background: #CDCCBF;
+
+      &.active {
+        width: 10px;
+        height: 10px;
+        background: #F6CE45;
+      }
+    }
+
+    @media(max-width: 1023px) {
+      margin-top: 10px;
+    }
+  }
+
+  .owl-nav {
+    display: flex;
+    gap: 10px;
+
+    button.owl-prev,
+    button.owl-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      margin: 0;
+      border-radius: 6px;
+      background: #243649;
+      transition: all .2s;
+
+      &:hover {
+        background: #112234;
+      }
+
+      &.disabled {
+        background: #596776;
+        pointer-events: none;
+      }
+    }
+
+    .owl-prev {
+      span {
+        width: 24px;
+        height: 24px;
+        background: url("../images/icons/arrow-left-white.svg");
+      }
+    }
+
+    .owl-next {
+
+      span {
+        width: 24px;
+        height: 24px;
+        background: url("../images/icons/arrow-right-white.svg");
+      }
+    }
+
+    @media(max-width: 1199px) {
+      margin-top: 10px;
+    }
+  }
+
+  &.owl-nav-absolute {
+    .owl-nav {
+      button.owl-prev,
+      button.owl-next {
+        position: absolute;
+        top: calc(50% - 24px);
+        transform: translateY(-50%);
+      }
+
+      .owl-prev {
+        left: -20px;
+      }
+
+      .owl-next {
+        right: -20px;
+      }
+    }
+
+    &.owl-nav-tile-margins {
+      .owl-nav {
+        button.owl-prev,
+        button.owl-next {
+          position: absolute;
+          top: calc(50% - 24px);
+          transform: translateY(-50%);
+        }
+
+        .owl-prev {
+          left: -62px;
+        }
+
+        .owl-next {
+          right: -62px;
+        }
+      }
+
+      @media(max-width: 1023px) {
+
+      }
+
+    }
+  }
+
+  &.owl-dots-white {
+    .owl-dot {
+      background: white;
+    }
+  }
+
+  &.owl-navigation-inline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+
+    .owl-stage-outer {
+      grid-column: span 3;
+    }
+
+    .owl-dots, .owl-nav {
+      margin-top: 40px;
+
+      @media(max-width: 1023px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

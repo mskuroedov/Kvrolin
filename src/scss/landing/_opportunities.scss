@@ -1,0 +1,63 @@
+.opportunities {
+  background: #F6CE45;
+  padding: 280px 0;
+  margin: -280px 0 -200px;
+  position: relative;
+  z-index: 1;
+  @media (max-width: 1023px) {
+    padding: 240px 0;
+    margin: -240px 0 -200px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+
+    @media(max-width: 1023px) {
+      grid-template-columns: 100%;
+      grid-row-gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .icon {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 34px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: #112234;
+      margin-bottom: 6px;
+      letter-spacing: 1.7px;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 26px;
+      color: #112234;
+    }
+
+    @media (max-width: 1023px) {
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      .text {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+}

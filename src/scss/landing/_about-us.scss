@@ -1,0 +1,122 @@
+.about-us {
+  padding: 80px 0;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 198px;
+    width: 100%;
+    height: 100%;
+    background: #F6CE45;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 57.3% auto;
+    grid-template-rows: 118px auto;
+    gap: 40px 30px;
+    grid-template-areas:
+    "video h1"
+    "video text";
+    width: 100%;
+    height: 100%;
+
+    .video {
+      grid-area: video;
+
+      iframe {
+        background: #C4C4C4;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+
+    .h1 {
+      grid-area: h1;
+    }
+
+    .text {
+      grid-area: text;
+    }
+
+    .text-body {
+      margin-bottom: 40px;
+    }
+
+    .tick-list {
+      margin-bottom: 36px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    padding: 40px 0;
+    &:after {
+      top: 187px;
+    }
+    &__grid {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "h1"
+        "video"
+        "text";
+      grid-row-gap: 20px;
+
+      .h1 {
+        margin-bottom: 0;
+      }
+
+      .video {
+        height: 207px;
+      }
+    }
+  }
+}
+
+.tick-list {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 15px;
+
+  li {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: url('../images/icons/tick-round.svg');
+      background-size: cover;
+      margin-right: 15px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    li {
+      font-size: 13px;
+      line-height: 20px;
+
+      &:before {
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.form-input {
+  position: relative;
+
+  input {
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 20px;
+    height: 52px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: #232524;
+    box-sizing: border-box;
+    transition: all .2s;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: #CDCCBF;
+    }
+
+    &:focus {
+      border-color: #F6CE45;
+    }
+    @media (max-width: 1023px) {
+      height: 50px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 20px;
+    letter-spacing: 0.1em;
+    padding-top: 10px;
+    background: white;
+    border: 1px solid white;
+    color: #232524;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all .2s;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: #CDCCBF;
+    }
+
+    &:focus {
+      border-color: #F6CE45;
+    }
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &:after {
+    content: url("../images/icons/tick--success.svg");
+    position: absolute;
+    height: 18px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .2s;
+    z-index: 1;
+  }
+
+  &.error {
+    input {
+      border-color: #CA1228;
+    }
+
+    &:after {
+      content: url("../images/icons/error-cross.svg");
+      opacity: 1;
+    }
+  }
+
+  &.--success {
+    input, textarea {
+      border: 1px solid #ACCDA7
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
