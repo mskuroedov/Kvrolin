@@ -4,6 +4,7 @@
 
   .h1 {
     margin-bottom: 30px;
+    color: #232524;
   }
 
   &__grid {
@@ -77,10 +78,12 @@
 
       .text-body {
         margin-bottom: 0;
+        color: #112234;
       }
 
       .h4 {
         margin-top: 7px;
+        color: #112234;
 
         &:after {
           content: '';

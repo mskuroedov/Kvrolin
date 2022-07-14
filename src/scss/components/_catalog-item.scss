@@ -1,4 +1,7 @@
 .catalog-item {
+  //display: flex;
+  //flex-direction: column;
+
   &__cover {
     border-radius: 20px 20px 0 0;
     margin-bottom: -80px;
@@ -71,6 +74,14 @@
     }
   }
 
+  @media(min-width: 1024px) {
+    transform-origin: center;
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
   @media(max-width: 1023px) {
     &__cover {
       border-radius: 10px 10px 0 0;

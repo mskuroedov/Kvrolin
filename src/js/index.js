@@ -31,14 +31,13 @@ $('#promo-slider-right').owlCarousel({
 $('#new-items-slider').owlCarousel({
     loop: false,
     items: 1,
+    margin: 30,
     responsive: {
         0: {
-            margin: 24,
             nav: false,
             dots: true,
         },
         1024: {
-            margin: 1,
             nav: true,
             dots: false,
         }
@@ -48,14 +47,13 @@ $('#new-items-slider').owlCarousel({
 $('#hot-sales-slider').owlCarousel({
     loop: false,
     items: 1,
+    margin: 30,
     responsive: {
         0: {
-            margin: 24,
             nav: false,
             dots: true,
         },
         1024: {
-            margin: 1,
             nav: true,
             dots: false,
         }

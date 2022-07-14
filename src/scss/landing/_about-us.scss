@@ -41,10 +41,12 @@
 
     .h1 {
       grid-area: h1;
+      color: #112234;
     }
 
     .text {
       grid-area: text;
+      color: #112234;
     }
 
     .text-body {
@@ -94,6 +96,7 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 26px;
+    color: #232524;
 
     &:before {
       content: '';
