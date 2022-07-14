@@ -191,7 +191,7 @@
   background: #F4C628;
   color: #112234;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .button {
     font-size: 13px;
     line-height: 16px;
@@ -646,7 +646,7 @@ body {
 body.mobile-menu-opened {
   overflow: hidden;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   body {
     padding-top: 78px;
   }
@@ -1089,6 +1089,16 @@ body.mobile-menu-opened {
 .catalog-item__description .actions a:active {
   color: #112234;
 }
+@media (min-width: 1024px) {
+  .catalog-item {
+    transform-origin: center;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+  }
+  .catalog-item:hover {
+    transform: scale(1.03);
+  }
+}
 @media (max-width: 1023px) {
   .catalog-item__cover {
     border-radius: 10px 10px 0 0;
@@ -1289,9 +1299,17 @@ body.mobile-menu-opened {
 }
 .tile-block .h1 {
   margin-bottom: 40px;
+  color: #232524;
 }
 .tile-block .catalog-slider {
   margin-bottom: -20px;
+}
+@media (min-width: 1024px) {
+  .tile-block .catalog-slider .owl-stage-outer {
+    padding: 20px;
+    margin: -20px;
+    width: calc(100% + 40px);
+  }
 }
 @media (max-width: 1023px) {
   .tile-block {
@@ -1353,14 +1371,16 @@ body.mobile-menu-opened {
 }
 .promo .slider-left__item .inner .h1 {
   margin-bottom: 20px;
+  color: #112234;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .promo .slider-left__item .inner .h1 br {
     display: none;
   }
 }
 .promo .slider-left__item .inner p {
   max-width: 477px;
+  color: #112234;
 }
 .promo .slider-left__item .illustration {
   position: absolute;
@@ -1416,6 +1436,9 @@ body.mobile-menu-opened {
   flex-direction: column;
   align-items: flex-start;
   height: 100%;
+}
+.promo .slider-right__item .inner .h4 {
+  color: #112234;
 }
 .promo .slider-right__item .illustration {
   position: absolute;
@@ -1608,10 +1631,12 @@ body.mobile-menu-opened {
 .big-exclusive-collection__text .h1 {
   max-width: 735px;
   margin-bottom: 19px;
+  color: #1B1717;
 }
 .big-exclusive-collection__text .h5 {
   max-width: 517px;
   margin-bottom: 60px;
+  color: #112234;
 }
 .big-exclusive-collection__text .button {
   height: 50px;
@@ -1675,9 +1700,11 @@ body.mobile-menu-opened {
 }
 .confidence__description .h1 {
   margin-bottom: 20px;
+  color: #1B1717;
 }
 .confidence__description .text-body {
   margin-bottom: 0;
+  color: #112234;
 }
 .confidence__grid {
   display: flex;
@@ -1701,6 +1728,10 @@ body.mobile-menu-opened {
 }
 .confidence__item .h6 {
   margin-bottom: 10px;
+  color: #112234;
+}
+.confidence__item p {
+  color: #112234;
 }
 @media (max-width: 1023px) {
   .confidence {
@@ -1773,9 +1804,11 @@ body.mobile-menu-opened {
 }
 .about-us__grid .h1 {
   grid-area: h1;
+  color: #112234;
 }
 .about-us__grid .text {
   grid-area: text;
+  color: #112234;
 }
 .about-us__grid .text-body {
   margin-bottom: 40px;
@@ -1817,6 +1850,7 @@ body.mobile-menu-opened {
   font-weight: 400;
   font-size: 17px;
   line-height: 26px;
+  color: #232524;
 }
 .tick-list li:before {
   content: "";
@@ -1847,10 +1881,12 @@ body.mobile-menu-opened {
 }
 .feedback__head .h1 {
   margin-bottom: 20px;
+  color: #1B1717;
 }
 .feedback__head .text-body {
   max-width: 735px;
   margin-bottom: 0;
+  color: #6E6E6E;
 }
 .feedback .feedback-slider .owl-stage-outer {
   margin: -20px;
@@ -1872,6 +1908,7 @@ body.mobile-menu-opened {
 }
 .feedback__item .text-body {
   margin-bottom: 20px;
+  color: #112234;
 }
 .feedback__item .user {
   display: flex;
@@ -1891,6 +1928,7 @@ body.mobile-menu-opened {
 }
 .feedback__item .user .name {
   margin-bottom: 4px;
+  color: #232524;
 }
 .feedback__item .user .date {
   font-weight: 400;
@@ -2020,6 +2058,7 @@ body.mobile-menu-opened {
 }
 .portfolio-preview .h1 {
   margin-bottom: 30px;
+  color: #232524;
 }
 .portfolio-preview__grid {
   display: grid;
@@ -2088,9 +2127,11 @@ body.mobile-menu-opened {
 }
 .portfolio-preview__item .description .text-body {
   margin-bottom: 0;
+  color: #112234;
 }
 .portfolio-preview__item .description .h4 {
   margin-top: 7px;
+  color: #112234;
 }
 .portfolio-preview__item .description .h4:after {
   content: "";
