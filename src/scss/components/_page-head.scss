@@ -1,0 +1,19 @@
+.page-head {
+  margin-bottom: 20px;
+
+  .h1, .h5 {
+    color: #112234;
+  }
+
+  .h1 {
+    margin-bottom: 20px;
+  }
+
+  @media(min-width: 1023px) {
+    margin-bottom: 40px;
+    max-width: 735px;
+    .h1 {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.catalog-filters {
+  position: fixed;
+  z-index: 150;
+  height: 100%;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  width: 0;
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &.--open {
+    width: 100%;
+
+    .inner-block {
+      transform: translateX(0);
+    }
+  }
+
+  &.--closing {
+    width: 100%;
+
+    .inner-block {
+      transform: translateX(-100%);
+    }
+  }
+
+  .inner-block {
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 0 24px rgba(36, 54, 73, 0.2);
+    -ms-overflow-style: none;
+    transform: translateX(-100%);
+    padding: 20px;
+    overflow-y: scroll;
+    transition: all .2s;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media(min-width: 768px) {
+      width: 513px;
+      padding: 84px 46px 78px 79px;
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #112234;
+
+    &:hover {
+      color: #F6CE45;
+    }
+  }
+
+  &__head {
+    margin-bottom: 22px;
+  }
+
+  &__list-item {
+    a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 26px;
+      color: #112234;
+      opacity: 0.6;
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+
+      &:after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("../images/icons/chevron-black.svg");
+        margin-left: auto;
+      }
+
+      &:hover,
+      &[aria-expanded=true] {
+        opacity: 1;
+        color: #112234;
+      }
+
+      &[aria-expanded=true] {
+        padding: 10px 0;
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    + .catalog-filters__list-item {
+      border-top: 1px solid rgba(246, 244, 244, .6);
+    }
+
+    .filter-block {
+      padding-bottom: 20px;
+    }
+  }
+
+  .range-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 15px;
+    position: relative;
+
+    .separator {
+      width: 30px;
+      height: 1px;
+      background: #F6F4F4;
+      margin-bottom: 20px;
+      align-self: flex-end;
+    }
+
+    .form-input {
+      width: 164px;
+
+      input {
+
+        border: 1px solid #F6F4F4;
+        height: 40px;
+        padding-left: 20px;
+        text-align: left !important;
+      }
+    }
+
+    .price-slider {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .button {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 26px;
+      text-transform: unset;
+      height: 52px;
+      letter-spacing: -0.4px;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.contacts {
+  .tile-block .h1 {
+    margin-bottom: 20px;
+  }
+
+  &__head {
+    margin-bottom: 20px;
+    @media (min-width: 1024px) {
+      max-width: 60%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 32.1% 33.2% 33.2%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-bottom: 80px;
+    @media (max-width: 1023px) {
+      grid-template-columns: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #CDCCBF;
+    border-radius: 20px;
+    padding: 14px 0 38px;
+
+    .icon {
+      margin-bottom: 9px;
+      color: white;
+      font-size: 45px;
+      transform: scale(-1, 1);
+    }
+
+    .name {
+      color: #1B1717;
+      margin-bottom: 13px;
+    }
+
+    .text-body {
+      color: #112234;
+    }
+
+    &:nth-of-type(2n) {
+      background: #112234;
+
+      .icon {
+        color: #F6CE45;
+      }
+
+      .name, .text-body {
+        color: white;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      border-radius: 10px;
+      padding: 14px 0 30px;
+      .icon {
+        font-size: 34px;
+      }
+      .name {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+
+    .h2 {
+      margin-bottom: 0;
+      @media(min-width: 1024px) {
+        grid-column: span 2;
+      }
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: 100%;
+      align-items: center;
+      grid-row-gap: 20px;
+
+      .form-input input,
+      .form-input textarea {
+        padding-left: 12px;
+        border-radius: 2px;
+      }
+
+      .form-input textarea {
+        padding-top: 13px;
+      }
+
+      .actions {
+        margin-top: 3px;
+        display: grid;
+        grid-template-columns: 43.9% auto;
+        align-items: center;
+        grid-column-gap: 20px;
+
+        .button {
+          height: 52px;
+        }
+
+        .agreement-text {
+          font-size: 14px;
+          line-height: 20px;
+          color: #112234;
+          letter-spacing: -0.6px;
+        }
+      }
+    }
+
+    .map {
+      width: 100%;
+      height: 380px;
+    }
+
+    @media(max-width: 1023px) {
+      grid-template-columns: 100%;
+      margin-bottom: 40px;
+      .form {
+        grid-row-gap: 16px;
+
+        .form-input input,
+        .form-input textarea {
+          font-size: 10px;
+          line-height: 12px;
+        }
+
+        input {
+          height: 50px;
+        }
+        textarea{
+          min-height: 147px;
+        }
+
+        .actions {
+          margin-top: 16px;
+          grid-template-columns: 100%;
+          grid-row-gap: 10px;
+        }
+      }
+      .map{
+        height: 235px;
+      }
+    }
+  }
+}

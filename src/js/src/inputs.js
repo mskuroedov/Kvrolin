@@ -10,8 +10,7 @@ $(document).ready(function () {
         jitMasking: false
     });
 
-    //input validations
-    $('input[required]').on('focusout', function () {
+    function handleRequiredInput(){
         if ($(this).attr('data-inputmask')) {
 
             if ($(this).inputmask("isComplete")) {
@@ -35,6 +34,7 @@ $(document).ready(function () {
                 }
             }
         }
-
-    });
+    }
+    $('input[required]').on('focusout', handleRequiredInput);
+    $('textarea[required]').on('focusout', handleRequiredInput);
 });

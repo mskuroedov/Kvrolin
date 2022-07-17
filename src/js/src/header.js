@@ -18,6 +18,7 @@ $('.mobile__menu .close-btn').on('click', closeMobileMenu)
 $('.mobile__menu nav a:not(.catalog-link)').on('click', closeMobileMenu)
 $('.mobile__menu__bg').on('click', closeMobileMenu);
 
+//catalog navigation
 $('.mobile__menu nav a.catalog-link').on('click', function () {
     $('#main-menu').hide();
     $('#catalog-menu').show();

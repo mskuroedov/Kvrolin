@@ -1,6 +1,24 @@
 .form-input {
   position: relative;
 
+  label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B9AA81;
+    margin-bottom: 6px;
+    @media(max-width: 1023px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &.--required {
+    label:after {
+      content: '*';
+    }
+  }
+
   input {
     width: 100%;
     font-weight: 400;
@@ -23,6 +41,7 @@
     &:focus {
       border-color: #F6CE45;
     }
+
     @media (max-width: 1023px) {
       height: 50px;
     }
@@ -53,14 +72,20 @@
     }
   }
 
+  &.--bordered {
+    input,
+    textarea {
+      border: 1px solid #CDCCBF;
+    }
+  }
+
   .icon {
     width: 24px;
     height: 24px;
     display: none;
     position: absolute;
     right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 16px;
     z-index: 5;
 
     img {
@@ -72,16 +97,15 @@
     content: url("../images/icons/tick--success.svg");
     position: absolute;
     height: 18px;
-    top: 50%;
+    top: 16px;
     right: 20px;
-    transform: translateY(-50%);
     opacity: 0;
     transition: all .2s;
     z-index: 1;
   }
 
   &.error {
-    input {
+    input, textarea {
       border-color: #CA1228;
     }
 
@@ -93,11 +117,42 @@
 
   &.--success {
     input, textarea {
-      border: 1px solid #ACCDA7
+      border: 1px solid #112234
     }
 
     &:after {
       opacity: 1;
+    }
+  }
+}
+
+.custom-control {
+  .custom-control-label {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .custom-control-input {
+    &:focus{
+      ~ .custom-control-label::before {
+        border-color: #F6CE45;
+        box-shadow: none;
+      }
+    }
+    &:checked {
+      ~ .custom-control-label {
+        &::before {
+          background: #F6CE45;
+          border-color: #F6CE45;
+          box-shadow: none !important;
+        }
+
+        &::after {
+          box-shadow: none !important;
+        }
+      }
     }
   }
 }
