@@ -117,6 +117,5 @@ exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
 exports.deploy = deploy;
-// exports.deploy = series(cleanDist, parallel(fonts, images, scripts, styles, html), deploy);
 exports.dev = series(cleanDist, parallel(fonts, images, scriptsDev, stylesDev, html), parallel(browsersync, startwatch));
 exports.default = series(cleanDist, parallel(fonts, images, scripts, styles, html));
