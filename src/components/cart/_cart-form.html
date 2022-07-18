@@ -1,0 +1,89 @@
+<section class="cart-form">
+    <div class="container">
+        <h2 class="h2">Оформление доставки</h2>
+        <div class="cart-form__grid">
+            <div class="cart-form__contacts contacts">
+                <div class="h6">Контактная информация</div>
+                <div class="form-input --required">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" required placeholder="Имя">
+                </div>
+                <div class="form-input --required">
+                    <label for="phone">Номер телефона</label>
+                    <input type="text" name="name" id="phone" data-inputmask="'mask':'+7(999)999-99-99'"
+                           required>
+                </div>
+                <div class="form-input --required">
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" name="name" required id="address" placeholder="Улица, дом, квартира">
+                </div>
+                <div class="form-input">
+                    <label for="comment">Коммент к заказу</label>
+                    <input type="text" name="name" id="comment" placeholder="Например время доставки">
+                </div>
+            </div>
+            <div class="cart-form__delivery delivery">
+                <div>
+                    <div class="h6">Способ оплаты</div>
+                    <div class="custom-radio">
+                        <input type="radio" name="payment" value="p1" id="payment-1" checked>
+                        <label for="payment-1">Наличные</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="payment" value="p2" id="payment-2">
+                        <label for="payment-2">Карта VISA/MASTERCARD</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="payment" value="p3" id="payment-3">
+                        <label for="payment-3">Сбербанк.онлайн</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="h6">Доставка</div>
+                    <div class="custom-radio">
+                        <input type="radio" name="delivery" value="d1" id="delivery-1" checked>
+                        <label for="delivery-1">Доставка</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="delivery" value="d2" id="delivery-2">
+                        <label for="delivery-2">Самовывоз</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-form__promocode promocode">
+                <div class="form-input --required">
+                    <label for="name">Промокод</label>
+                    <input type="text" name="promocode" id="promocode">
+                </div>
+                <button class="button">Применить</button>
+            </div>
+            <div class="cart-form__bonuses bonuses">
+                <h6 class="h6">Бонусы</h6>
+                <p class="text-body">Выберите бонусы, которые хотите использовать</p>
+                <div class="bonuses-grid">
+                    <div class="bonus-checkbox">
+                        <input type="checkbox" id="bonus-1" checked>
+                        <label for="bonus-1">Бесплатная доставка при заказе от 20 000 руб.</label>
+                    </div>
+                    <div class="bonus-checkbox">
+                        <input type="checkbox" id="bonus-2">
+                        <label for="bonus-2">Бесплатный оверлок при закезе от 40 000 руб.</label>
+                    </div>
+                    <div class="bonus-checkbox">
+                        <input type="checkbox" id="bonus-3">
+                        <label for="bonus-3">Скидка 5% при заказе от 80 000 руб.</label>
+                    </div>
+                    <div class="bonus-checkbox">
+                        <input type="checkbox" id="bonus-4">
+                        <label for="bonus-4">Специальные условия при заказе от 100 000 руб.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-form__approve approve">
+                <p class="text-body">Минимальная сумма заказа от 8 000 руб.</p>
+                <p class="text-body">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных.</p>
+                <button class="button button--block">оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</section>

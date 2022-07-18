@@ -42,6 +42,21 @@
       background: #F8F8F8;
     }
   }
+  &--outline-secondary {
+    background: transparent;
+    color: #112234;
+    border: 1px solid #112234;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      background: #112234;
+    }
+
+    &:disabled {
+      background: #F8F8F8;
+    }
+  }
 
   &--block {
     width: 100%;
