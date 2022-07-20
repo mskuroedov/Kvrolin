@@ -48,10 +48,12 @@ function fonts() {
 }
 
 function scripts() {
-    return src('src/js/app.js')
+    return src('src/js/*.js')
         .pipe(rollup({plugins: [babel(), resolve(), commonjs()]}, 'umd'))
-        .pipe(concat('app.min.js'))
         .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(dest(`${destFolder}/js/`))
         .pipe(browserSync.stream())
 }

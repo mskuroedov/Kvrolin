@@ -55,6 +55,10 @@
       gap: 30px;
       margin-bottom: 39px;
 
+      .filter-btn-block:after {
+        display: none;
+      }
+
       .select2 {
         display: block;
         min-width: 215px;
