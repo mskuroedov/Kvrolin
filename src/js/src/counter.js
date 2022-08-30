@@ -25,14 +25,30 @@
             $subBtn = $counterRoot.find('.sub')[0];
 
 
-        $($counterInput).on('change', function (e) {
+        $($counterInput).on('change', function () {
             $(this).val(`${value} ${suffix}`);
         })
-        $($plusBtn).on('click', function (e) {
+        $($counterInput).on('focusin', function () {
+            $(this).val(`${value}`)
+        })
+        $($counterInput).on('focusout', function () {
+            $(this).val(`${value} ${suffix}`);
+        })
+        $($counterInput).on('keyup', function (e) {
+            let charCode = (e.which) ? e.which : event.keyCode
+
+            if (String.fromCharCode(charCode).match(/\D/g) && charCode !== 8) return false;
+
+            let newVal = $(this).val()
+            if (newVal === '' || newVal === '0') newVal = 1;
+            value = newVal
+
+        })
+        $($plusBtn).on('click', function () {
             value++
             $($counterInput).trigger('change')
         })
-        $($subBtn).on('click', function (e) {
+        $($subBtn).on('click', function () {
             if (value <= 1) return;
             value--
             $($counterInput).trigger('change')

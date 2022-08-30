@@ -1,15 +1,6 @@
 .counter {
   position: relative;
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 3;
-  }
-
   input {
     width: 100%;
     background: #FFFFFF;
