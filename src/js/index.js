@@ -28,6 +28,37 @@ $('#promo-slider-right').owlCarousel({
     },
     navText: ['<span></span>', '<span></span>']
 })
+/*
+ * Categories slider init
+ */
+let categories = $('.promo__category-item'),
+    categoriesSlider = $('#categories-slider');
+
+for (let i = 0; i < categories.length; i++) {
+    let slideIndex = Math.floor(i / 4);
+    if (i === 0 || i % 4 === 0) {
+        categoriesSlider.append(`<div class="promo__categories-grid" id="category-slide-${slideIndex}"></div>`)
+    }
+    categories.eq(i).appendTo($(`#category-slide-${slideIndex}`))
+}
+
+$('#categories-slider').owlCarousel({
+    dots: true,
+    nav: false,
+    loop: false,
+    margin: 10,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        1024: {
+            items: 2,
+        }
+    }
+})
+/*
+ * Categories slider end
+ */
 $('#new-items-slider').owlCarousel({
     loop: false,
     items: 1,
